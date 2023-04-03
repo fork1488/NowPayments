@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+ <app key="nowpayments" version="10002">
+  <word key="__app_nowpayments" js="0">NowPayments Gateway</word>
+  <word key="gateway__Nowpayments" js="0">NowPayments</word>
+  <word key="gateway__Nowpayments_desc" js="0">NowPayments Gateway for Invision Community</word>
+  <word key="nowpayments_debug_email" js="0">Debug E-mail</word>
+  <word key="nowpayments_secret" js="0">Secret key</word>
+  <word key="nowpayments_apikey" js="0">API key</word>
+  <word key="module__nowpayments_nowpayments" js="0">NowPayments Payment Gateway</word>
+ </app>
+</language>

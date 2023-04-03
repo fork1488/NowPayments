@@ -1,0 +1,8 @@
+{
+    "front": {
+        "nowpayments": {
+            "default_controller": "",
+            "protected": false
+        }
+    }
+}

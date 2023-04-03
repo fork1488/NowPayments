@@ -1,0 +1,6 @@
+{
+    "nowpaymentsGateway": {
+        "type": "C",
+        "class": "\\IPS\\nexus\\Gateway"
+    }
+}
