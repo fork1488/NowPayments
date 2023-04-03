@@ -31,7 +31,7 @@ if (\IPS\Request::i()->nexustransactionid)
     {
         $postfields = array(
             'price_amount' => (float)(string)$transaction->amount->amount,
-            'price_currency' => 'usd',
+            'price_currency' => $transaction->amount->currency,
             'order_id' => $transaction->id,
 			'order_description' => 'Invoice: ' . $transaction->invoice->id,
             'success_url' => (string)$transaction->url() ,
@@ -156,7 +156,7 @@ elseif (\IPS\Request::i()->notify)
                             $transaction->sendNotification();
                         }
 						
-						errorAndDie($error_msg);
+						errorAndDie('partially_paid');
                     }
 					else if ($status == 'confirming')
 					{
