@@ -123,7 +123,7 @@ elseif (\IPS\Request::i()->notify)
                         $transaction->sendNotification();
 
                     }
-                    else if ($status == 'failed'/* || $status == 'expired'*/) // if expired its flood client email?
+                    else if ($status == 'failed')
                     {
                         //payment error
                         if ($transaction->status !== \IPS\nexus\Transaction::STATUS_REFUSED)
@@ -132,6 +132,16 @@ elseif (\IPS\Request::i()->notify)
                             $transaction->status = \IPS\nexus\Transaction::STATUS_REFUSED;
                             $transaction->save();
                             $transaction->sendNotification();
+                        }
+                    }
+					else if ($status == 'expired')
+                    {
+                        //payment error
+                        if ($transaction->status !== \IPS\nexus\Transaction::STATUS_REFUSED)
+                        {
+							$transaction->gw_id = $transactionId;
+                            $transaction->status = \IPS\nexus\Transaction::STATUS_REFUSED;
+                            $transaction->save();
                         }
                     }
 					else if ($status == 'refunded')

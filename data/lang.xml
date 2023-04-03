@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language>
- <app key="nowpayments" version="10002">
+ <app key="nowpayments" version="10003">
   <word key="__app_nowpayments" js="0">NowPayments Gateway</word>
   <word key="gateway__Nowpayments" js="0">NowPayments</word>
   <word key="gateway__Nowpayments_desc" js="0">NowPayments Gateway for Invision Community</word>
